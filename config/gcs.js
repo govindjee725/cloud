@@ -1,10 +1,11 @@
-require('dotenv').config();
 const { Storage } = require('@google-cloud/storage');
 
 const storage = new Storage({
-  keyFilename: process.env.GCP_KEY_PATH, // ✅ correct
+  keyFilename: 'key.json',
 });
 
-const bucket = storage.bucket(process.env.BUCKET_NAME);
+const bucketName = 'govind-file-storage-001';
+
+const bucket = storage.bucket(bucketName);
 
 module.exports = bucket;
