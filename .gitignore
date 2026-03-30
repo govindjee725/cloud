@@ -94,3 +94,5 @@ Dockerfile*
 *.pid
 *.seed
 *.lock
+git rm --cached key.json
+git rm --cached .env
